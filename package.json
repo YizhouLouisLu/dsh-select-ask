@@ -1,0 +1,51 @@
+{
+  "name": "dsh-select-ask-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Select text in the conversation to quote it into the composer, or ask about it in a throwaway side panel that leaves no record.",
+  "type": "module",
+  "main": "./host.js",
+  "files": [
+    "host.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "test/*.mjs",
+    "submission/*.yml"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "selection",
+    "quote",
+    "side-panel"
+  ],
+  "license": "MIT",
+  "icon": "./icon.svg",
+  "meta": {
+    "title": "划词引用与侧栏提问（dsh-select-ask-plugin）",
+    "description": "在对话里选中一段文字：引用进输入框，或在右侧临时小窗就这段内容提问；小窗关闭后不留任何记录。"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./host.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  }
+}

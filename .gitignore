@@ -1,0 +1,9 @@
+# macOS folder metadata
+.DS_Store
+
+# never committed: a linked/npm install keeps dependencies outside this tree,
+# but a local `pnpm install` here would create one
+node_modules/
+
+# logs and editor leftovers
+*.log

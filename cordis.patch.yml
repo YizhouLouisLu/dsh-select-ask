@@ -1,0 +1,9 @@
+# dsh-select-ask-plugin — the bundle's own patch layer.
+#
+# One Loader entry gives the package a home in the profile; the host half owns
+# the model call for the side panel (`/dsh-select-ask/*` webServer routes), and
+# `dsh.client` in package.json contributes the browser half, exactly like the
+# shipped ui-* packages.
+- insert:
+    - id: select-ask
+      name: 'dsh-select-ask-plugin'
