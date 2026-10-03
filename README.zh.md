@@ -1,5 +1,7 @@
 # dsh-select-ask
 
+[English](README.md) | 中文
+
 在 DSH Web UI 的对话里选中一段文字，然后要么**引用**进输入框，要么在**一次性侧栏小窗**里就它提问
 —— 就是 Codex 里那两个习惯。
 
@@ -114,4 +116,4 @@ DSH：Host 模块的世代按进程缓存，行的 specifier 无法就地重新�
 
 ## License
 
-MIT —— 见 [LICENSE](LICENSE)。English: [README.md](README.md).
+MIT —— 见 [LICENSE](LICENSE)。

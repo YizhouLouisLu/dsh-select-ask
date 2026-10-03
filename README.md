@@ -1,5 +1,7 @@
 # dsh-select-ask
 
+English | [中文](README.zh.md)
+
 Select text in the DSH Web UI conversation and either **quote** it into the composer or **ask about
 it in a throwaway side panel** — the two habits Codex users have.
 
@@ -129,4 +131,4 @@ Things that cost time while building this, written down because they are not obv
 
 ## License
 
-MIT — see [LICENSE](LICENSE). 中文说明见 [README.zh.md](README.zh.md).
+MIT — see [LICENSE](LICENSE).
