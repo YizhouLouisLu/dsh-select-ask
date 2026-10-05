@@ -1,17 +1,6 @@
-# Catalog entry for awesome-dsh-plugin.
-#
-# This is the whole submission: copy this one file into a PR against
-# https://github.com/awesome-dsh-plugin/awesome-dsh-plugin as
-#   data/plugins/YizhouLouisLu__dsh-select-ask.yml
-# The two READMEs in that repo are generated — do not edit them by hand.
-#
-# Requirements it already satisfies (CI reads them from the repository):
-#   - package.json declares dsh.bundle (./host.js + ./cordis.patch.yml)
-#   - real, working code (no placeholder)
-
 url: https://github.com/YizhouLouisLu/dsh-select-ask
 name: YizhouLouisLu/dsh-select-ask
 category: ui
 description:
-  en: Selecting text in the chat quotes it into the composer as an annotation, or asks about it in a throwaway side panel that leaves no record.
+  en: Select text in the chat to quote it into the composer as an annotation, or to ask about it in a throwaway side panel that leaves no record.
   zh: 在对话里划词引用进输入框（显示为「N 条注释」小框），或在侧栏一次性小窗里就这段内容提问（不留任何记录）。

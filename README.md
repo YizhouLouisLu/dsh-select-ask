@@ -86,6 +86,12 @@ Reload the Web UI page afterwards so the new client bundle enters the boot graph
 change (`host.js`) needs a DSH restart: the host module generation is cached per process, and a row's
 specifier cannot be re-imported in place.
 
+### Marketplace
+
+Submissions to the [awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)
+catalog are one YAML entry per plugin and one file per pull request; this repo's entry is
+[`submission/YizhouLouisLu__dsh-select-ask.yml`](submission/YizhouLouisLu__dsh-select-ask.yml).
+
 ## Status
 
 Developed and verified against **dsh core 0.2.0-rc.2** (DSH Desktop 2.0.15-beta.1). No `engines.dsh`

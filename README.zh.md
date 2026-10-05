@@ -78,6 +78,12 @@ ctx.inputTriggers.registerSource({
 装完刷新 Web UI 页面，新的客户端 bundle 才会进入 boot graph。**Host 半**（`host.js`）的改动需要重启
 DSH：Host 模块的世代按进程缓存，行的 specifier 无法就地重新导入。
 
+### 插件市场
+
+[awesome-dsh-plugin](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin) 目录的投稿规则是
+"一个插件一个 YAML 条目、一个 PR 一个文件"；本仓库的条目在
+[`submission/YizhouLouisLu__dsh-select-ask.yml`](submission/YizhouLouisLu__dsh-select-ask.yml)。
+
 ## 状态
 
 开发与验证环境：**dsh core 0.2.0-rc.2**（DSH Desktop 2.0.15-beta.1）。暂未声明 `engines.dsh` 范围：
