@@ -383,18 +383,22 @@ window.__ModuleLoader__.load({
 
     // ── Styles ───────────────────────────────────────────────────────────────
     var TOOLBAR_CSS = [
-      ".dsh-sa-bar{position:fixed;z-index:60;display:flex;align-items:center;gap:2px;padding:3px;",
-      "border:0.5px solid var(--dsw-alias-border-l2);border-radius:8px;background:var(--dsw-alias-bg-overlay);",
-      "box-shadow:0 8px 24px rgba(0,0,0,0.18);pointer-events:auto;",
-      "font-family:var(--dsw-font-family);font-size:12px;line-height:1;color:var(--dsw-alias-label-primary)}",
+      ".dsh-sa-bar{position:fixed;z-index:60;display:flex;align-items:stretch;gap:0;padding:4px;",
+      "border:0.5px solid var(--dsw-alias-border-l3);border-radius:10px;background:var(--dsw-alias-bg-overlay);",
+      "box-shadow:0 12px 32px rgba(0,0,0,0.18),inset 0 1px 0 rgba(255,255,255,0.04);pointer-events:auto;",
+      "font-family:var(--dsw-font-family);font-size:13px;line-height:1;color:var(--dsw-alias-label-primary)}",
+      "body[data-ds-dark-theme] .dsh-sa-bar{background:var(--dsw-alias-bg-layer-2);",
+      "box-shadow:0 14px 34px rgba(0,0,0,0.5),inset 0 1px 0 rgba(255,255,255,0.05)}",
       ".dsh-sa-bar[data-below=true]{transform:translate(-50%,0)}",
       ".dsh-sa-bar[data-below=false]{transform:translate(-50%,-100%)}",
-      ".dsh-sa-btn{display:inline-flex;align-items:center;gap:5px;height:26px;padding:0 9px;border:0;border-radius:6px;",
-      "background:transparent;color:var(--dsw-alias-label-primary);font:inherit;cursor:pointer;white-space:nowrap}",
+      ".dsh-sa-btn{display:inline-flex;align-items:center;gap:5px;height:32px;padding:0 13px;border:0;border-radius:7px;",
+      "background:transparent;color:var(--dsw-alias-label-primary);font:inherit;font-weight:500;letter-spacing:0.01em;",
+      "cursor:pointer;white-space:nowrap}",
       ".dsh-sa-btn:hover{background:var(--dsw-alias-interactive-bg-hover)}",
       ".dsh-sa-btn:active{background:var(--dsw-alias-interactive-bg-active)}",
+      ".dsh-sa-btn:focus-visible{outline:2px solid var(--dsw-alias-state-business-primary);outline-offset:2px}",
       ".dsh-sa-btn:disabled{color:var(--dsw-alias-label-tertiary);cursor:default;background:transparent}",
-      ".dsh-sa-sep{width:1px;height:14px;background:var(--dsw-alias-border-l1)}",
+      ".dsh-sa-sep{width:1px;align-self:stretch;margin:3px 0;background:var(--dsw-alias-border-l3)}",
     ].join("");
 
     var PANEL_CSS = [
@@ -406,27 +410,28 @@ window.__ModuleLoader__.load({
       "font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--dsw-alias-label-tertiary)}",
       ".dsh-sa-contextText{margin:6px 0 0;max-height:92px;overflow:auto;white-space:pre-wrap;word-break:break-word;",
       "font-size:12px;line-height:1.55;color:var(--dsw-alias-label-secondary);",
-      "border-left:2px solid var(--dsw-alias-border-l2);padding-left:8px}",
+      "border-left:2px solid var(--dsw-alias-border-l3);padding-left:8px}",
       ".dsh-sa-thread{flex:1;min-height:0;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px;",
-      "scrollbar-color:var(--dsw-alias-scrollbar-thumb-l1) transparent}",
-      ".dsh-sa-empty{margin:auto;padding:0 16px;text-align:center;color:var(--dsw-alias-label-tertiary);font-size:12px;line-height:1.7}",
+      "scrollbar-color:var(--dsw-alias-scrollbar-bg-l1) transparent}",
+      ".dsh-sa-empty{margin:auto;padding:0 16px;text-align:center;color:var(--dsw-alias-label-secondary);font-size:12px;line-height:1.7}",
       ".dsh-sa-msg{max-width:100%;white-space:pre-wrap;word-break:break-word;line-height:1.6}",
       ".dsh-sa-msg[data-role=user]{align-self:flex-end;max-width:88%;padding:6px 10px;border-radius:10px;",
+      "box-sizing:border-box;border:0.5px solid var(--dsw-alias-border-l3);",
       "background:var(--dsw-specific-bubble,var(--dsw-alias-bg-layer-2))}",
       ".dsh-sa-msg[data-role=assistant]{align-self:stretch;color:var(--dsw-alias-label-primary)}",
       ".dsh-sa-msg[data-pending=true]{color:var(--dsw-alias-label-tertiary)}",
       ".dsh-sa-note{font-size:12px;line-height:1.6;color:var(--dsw-alias-label-secondary)}",
       ".dsh-sa-error{font-size:12px;line-height:1.6;color:var(--dsw-alias-state-error-primary)}",
       ".dsh-sa-editor{flex:none;border-top:0.5px solid var(--dsw-alias-border-l3);padding:8px 10px 6px}",
-      ".dsh-sa-box{display:flex;align-items:flex-end;gap:8px;border:0.5px solid var(--dsw-alias-border-l2);",
+      ".dsh-sa-box{display:flex;align-items:flex-end;gap:8px;border:0.5px solid var(--dsw-alias-border-l3);",
       "border-radius:10px;background:var(--dsw-alias-bg-layer-2);padding:6px 6px 6px 10px}",
       ".dsh-sa-box:focus-within{border-color:var(--dsw-alias-state-business-primary)}",
       ".dsh-sa-input{flex:1;min-width:0;max-height:120px;border:0;outline:0;resize:none;background:transparent;",
       "font:inherit;line-height:1.55;color:var(--dsw-alias-label-primary)}",
       ".dsh-sa-input::placeholder{color:var(--dsw-alias-label-tertiary)}",
-      ".dsh-sa-send{flex:none;height:26px;padding:0 10px;border:0;border-radius:6px;cursor:pointer;font:inherit;",
-      "font-size:12px;background:var(--dsw-alias-button-primary-fill,var(--dsw-alias-brand-primary));",
-      "color:var(--dsw-alias-brand-text,#fff)}",
+      ".dsh-sa-send{flex:none;height:28px;padding:0 12px;border:0;border-radius:7px;cursor:pointer;font:inherit;",
+      "font-size:13px;font-weight:500;background:var(--dsw-alias-button-primary-fill,var(--dsw-alias-brand-primary));",
+      "color:var(--dsw-alias-label-primary-foreground)}",
       ".dsh-sa-send:hover:not(:disabled){background:var(--dsw-alias-button-primary-hover,var(--dsw-alias-brand-primary))}",
       ".dsh-sa-send:disabled{opacity:.5;cursor:default}",
       ".dsh-sa-foot{margin:6px 2px 0;font-size:11px;line-height:1.5;color:var(--dsw-alias-label-tertiary)}",
@@ -438,7 +443,7 @@ window.__ModuleLoader__.load({
       ".dsh-sa-notes{position:relative;display:inline-flex;align-items:center;gap:2px;margin:0 0 6px;",
       "pointer-events:auto;font-family:var(--dsw-font-family);font-size:12px;color:var(--dsw-alias-label-secondary)}",
       ".dsh-sa-notesPill{display:inline-flex;align-items:center;gap:6px;height:26px;padding:0 10px;cursor:pointer;",
-      "border:0.5px solid var(--dsw-alias-border-l2);border-radius:13px;background:var(--dsw-alias-bg-layer-2);",
+      "border:0.5px solid var(--dsw-alias-border-l3);border-radius:13px;background:var(--dsw-alias-bg-layer-2);",
       "color:inherit;font:inherit;white-space:nowrap}",
       ".dsh-sa-notesPill:hover{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary)}",
       ".dsh-sa-notesPill[aria-expanded=true]{background:var(--dsw-alias-interactive-bg-active);color:var(--dsw-alias-label-primary)}",
@@ -448,9 +453,11 @@ window.__ModuleLoader__.load({
       "font:inherit;font-size:14px;line-height:1}",
       ".dsh-sa-notesClear:hover{background:var(--dsw-alias-interactive-bg-hover);color:var(--dsw-alias-label-primary)}",
       ".dsh-sa-notesPanel{position:absolute;left:0;bottom:calc(100% + 6px);z-index:40;width:min(560px,78vw);",
-      "max-height:340px;overflow:auto;padding:10px 12px;border:0.5px solid var(--dsw-alias-border-l2);",
+      "max-height:340px;overflow:auto;padding:10px 12px;border:0.5px solid var(--dsw-alias-border-l3);",
       "border-radius:12px;background:var(--dsw-alias-bg-overlay);box-shadow:0 10px 30px rgba(0,0,0,0.18);",
       "color:var(--dsw-alias-label-primary)}",
+      "body[data-ds-dark-theme] .dsh-sa-notesPanel{background:var(--dsw-alias-bg-layer-1);",
+      "box-shadow:0 12px 32px rgba(0,0,0,0.45)}",
       ".dsh-sa-noteRow{padding:2px 0}",
       ".dsh-sa-noteRow + .dsh-sa-noteRow{margin-top:10px;padding-top:10px;border-top:0.5px solid var(--dsw-alias-border-l3)}",
       ".dsh-sa-noteHead{display:flex;align-items:center;gap:8px}",
@@ -467,8 +474,8 @@ window.__ModuleLoader__.load({
     // ── Dictionaries ─────────────────────────────────────────────────────────
     /** UI copy, keyed the same in both languages. */
     var zh = {
-      quote: "引用",
-      ask: "侧栏提问",
+      quote: "添加到对话",
+      ask: "在侧边聊天中提问",
       quoteTitle: "把选中的文字加入输入框（作为注释，不展开正文）",
       askTitle: "在侧栏小窗中就此提问（不留下记录）",
       tabTitle: "侧栏提问",
@@ -492,8 +499,8 @@ window.__ModuleLoader__.load({
     };
 
     var en = {
-      quote: "Quote",
-      ask: "Ask aside",
+      quote: "Add to chat",
+      ask: "Ask in side chat",
       quoteTitle: "Add the selected text to the composer as an annotation",
       askTitle: "Ask about this in the side panel (leaves no record)",
       tabTitle: "Ask aside",
@@ -540,7 +547,7 @@ window.__ModuleLoader__.load({
           }
           // Width is only needed to keep the bar inside the viewport; the real
           // width is content-sized, so clamp on the anchor and let CSS center it.
-          var halfWidth = 120;
+          var halfWidth = 150;
           var anchor = info.first;
           var below = anchor.top < 64;
           var top = below ? info.last.bottom + 8 : anchor.top - 8;
